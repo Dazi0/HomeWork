@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+   --yellow: #FEA775;
+   --orange: #AA405B;
+   --orange-purple: #AA405B;
+   --light-purple: #802B5B;
+   --purple: #56194F;
+   --dark-purple: #260B2C;
+   --dark: #010002;
+   --white: #d7d7d7;
+   --dark-grey: #AAAAAA;
+}
+
+/* Обнуление */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+.bx {
+   font-size: 1.7rem;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+   color: var(--white)
+}
+html,
+body {
+   height: 100%;
+}
+
+/* -------------------------- */
+
+[class*="__container"] {
+   max-width: 1180px; /* желательно 1080 */
+   margin: 0px auto;
+   padding: 0px 15px;
+}
+
+/* -------------На будущее------------- */
+
+/* ПК */
+/* @media (max-width: 1160px){
+   [class*="__container"] {
+      max-width: 970px;
+   }
+} */
+/* @media (max-width: 1087px){
+   [class*="__container"] {
+      max-width: 970px;
+   }
+} */
+
+/* Планшет */
+/* @media (max-width: 991.98px){
+   [class*="__container"] {
+      max-width: 750px;
+   }
+} */
+
+/* Телефон */
+/* @media (max-width: 767.98px){
+   [class*="__container"] {
+      max-width: none;
+   }
+} */
+
+/* -------------------------- */
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   background: linear-gradient(30deg, var(--dark-purple), var(--dark));
+   background-repeat: no-repeat;
+}
+.header {
+   width: 100%;
+}
+.main {
+   flex: 1 1 auto;
+}
+.footer {
+   width: 100%;
+   padding: 20px 0;
+   color: var(--white);
+}
+
+/* -------------Header------------- */
+
+.header__container {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   min-height: 82px;
+}
+.header__logo {
+   color: var(--yellow);
+   font-weight: 700;
+   font-size: 18px;
+   display: flex;
+   flex-direction: row;
+}
+.logo__name span {
+   color: var(--orange);
+}
+.header__menu {
+   flex: 1 1 auto;
+}
+
+/* -------------------------- */
+
+.form__input {
+   display: flex;
+   align-items: center;
+   height: 44px;
+   padding: 0 140px 0 35px;
+}
+.form__input input {
+   flex: 0 0 300px;
+   padding: 15px;
+   height: 100%;
+   border: none;
+   border-radius: 5px 0 0 5px;
+   outline: none;
+   width: 100%;
+   color: var(--yellow);
+   background: var(--dark-purple);
+   z-index: 200;
+}
+.search__button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   background: var(--purple);
+   border-radius: 0 5px 5px 0;
+   padding: 15px;
+   height: 100%;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   z-index: 200;
+}
+.header .bx {
+   color: var(--yellow);
+}
+
+/* -------------------------- */
+
+.menu {
+   display: flex;
+   justify-content: flex-end;
+}
+.menu__list {
+   display: flex;
+}
+.menu__item {
+   margin: 0 40px 0 0;
+}
+.menu__link {
+   color: var(--yellow);
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 1.2;
+   letter-spacing: 1px;
+   transition: all 0.3s ease;
+}
+.menu__link:hover {
+   color: var(--orange);
+}
+.active {
+   color: var(--orange);
+}
+
+/* -------------------------- */
+
+.button {
+   cursor: pointer;
+   display: inline-block;
+   font-weight: 800;
+   font-size: 14px;
+   line-height: 1.2;
+   letter-spacing: 0.05em;
+   color: var(--yellow);
+   border-radius: 5px;
+   background: linear-gradient(45deg, var(--purple), var(--light-purple));
+   padding: 14px 25px;
+   background-repeat: no-repeat;
+   transition: all 0.3s ease;
+}
+.button:hover {
+   border-radius: 10px;
+   color: var(--white);
+   filter: hue-rotate(10deg);
+}
+.bx.bx-menu {
+   display: none;
+}
+
+/* -------------Main------------- */
+
+.main__container {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   position: relative;
+}
+.road {
+   display: flex;
+   flex-direction: row;
+   color: var(--white);
+   margin-top: 35px;
+   padding: 0 30px;
+}
+.road p {
+   font-size: 14px;
+   padding: 0 15px;
+}
+
+/* -------------------------- */
+
+.main__header {
+   display: flex;
+   margin-top: 50px;
+}
+.main__poster {
+   flex: 0 1 20%;
+}
+.text-blog {
+   flex: 0 1 80%;
+   color: var(--white);
+   padding: 0 0 0 50px;
+}
+.text-blog__title {
+   font-size: 40px;
+   font-weight: 700;
+   padding-bottom: 50px;
+}
+.text-blog__text {
+   font-size: 18px;
+   line-height: 1.2;
+   letter-spacing: 0.05em;
+   padding-bottom: 25px;
+}
+.text-blog__text b {
+   font-size: 20px;
+}
+.text-blog__list {
+   font-size: 18px;
+   line-height: 1.2;
+   letter-spacing: 0.05em;
+}
+.text-blog__list ul {
+   gap: 10px;
+}
+.text-blog__list b {
+   font-size: 20px;
+}
+
+/* -------------------------- */
+
+.video-block {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: var(--white);
+   margin-top: 100px;
+}
+.video-block__title {
+   font-size: 25px;
+   padding-bottom: 30px;
+}
+
+/* -------------------------- */
+
+.reviews {
+   width: 100%;
+   color: var(--white);
+}
+.reviews__container {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding-bottom: 30px;
+}
+.reviews__title {
+   font-size: 25px;
+   padding-bottom: 50px;
+}
+.reviews form {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 60%;
+}
+.reviews input {
+   height: 44px;
+} 
+.reviews textarea {
+   resize: none;
+   max-height: 200px;
+}
+.reviews input,
+.reviews textarea{
+   color: var(--yellow);
+   background: var(--dark-purple);
+   padding: 10px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+}
+
+/* -------------------------- */
+
+.footer__container {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 82px;
+}
+.footer__menu {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 380px;
+}
